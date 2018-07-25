@@ -17,7 +17,6 @@
 		9873DFF62107BEC300B1AEA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9873DFF42107BEC300B1AEA2 /* Main.storyboard */; };
 		9873DFF82107BEC400B1AEA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9873DFF72107BEC400B1AEA2 /* Assets.xcassets */; };
 		9873DFFB2107BEC400B1AEA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9873DFF92107BEC400B1AEA2 /* LaunchScreen.storyboard */; };
-		9873E0032107BF3300B1AEA2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9873E0022107BF3300B1AEA2 /* GoogleService-Info.plist */; };
 		98B409352108D4020021B2AA /* big_noodle_titling_oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98B409332108D4010021B2AA /* big_noodle_titling_oblique.ttf */; };
 		98B409362108D4020021B2AA /* big_noodle_titling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98B409342108D4020021B2AA /* big_noodle_titling.ttf */; };
 /* End PBXBuildFile section */
@@ -37,7 +36,6 @@
 		9873DFF72107BEC400B1AEA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9873DFFA2107BEC400B1AEA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9873DFFC2107BEC400B1AEA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9873E0022107BF3300B1AEA2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		98B409332108D4010021B2AA /* big_noodle_titling_oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling_oblique.ttf; sourceTree = "<group>"; };
 		98B409342108D4020021B2AA /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,7 +107,6 @@
 				9873DFF72107BEC400B1AEA2 /* Assets.xcassets */,
 				9873DFF92107BEC400B1AEA2 /* LaunchScreen.storyboard */,
 				9873DFFC2107BEC400B1AEA2 /* Info.plist */,
-				9873E0022107BF3300B1AEA2 /* GoogleService-Info.plist */,
 				98B409322108D3DC0021B2AA /* Resources */,
 			);
 			path = "Gunpla Life";
@@ -210,7 +207,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9873DFFB2107BEC400B1AEA2 /* LaunchScreen.storyboard in Resources */,
-				9873E0032107BF3300B1AEA2 /* GoogleService-Info.plist in Resources */,
 				98B409362108D4020021B2AA /* big_noodle_titling.ttf in Resources */,
 				9873DFF82107BEC400B1AEA2 /* Assets.xcassets in Resources */,
 				98B409352108D4020021B2AA /* big_noodle_titling_oblique.ttf in Resources */,
