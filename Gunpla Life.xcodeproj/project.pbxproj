@@ -8,18 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		7CACB22D3A923532D8FC3333 /* Pods_Gunpla_Life.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7CEA7264D530CD8C63E8F1 /* Pods_Gunpla_Life.framework */; };
+		984184A321092AF000EEB247 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984184A221092AF000EEB247 /* CustomView.swift */; };
+		984184A621092C3500EEB247 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984184A521092C3500EEB247 /* Constants.swift */; };
+		984184AA21092EF900EEB247 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984184A921092EF900EEB247 /* CustomTextField.swift */; };
+		984184AC2109308900EEB247 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984184AB2109308900EEB247 /* CustomButton.swift */; };
 		9873DFF12107BEC300B1AEA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873DFF02107BEC300B1AEA2 /* AppDelegate.swift */; };
 		9873DFF32107BEC300B1AEA2 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873DFF22107BEC300B1AEA2 /* LoginVC.swift */; };
 		9873DFF62107BEC300B1AEA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9873DFF42107BEC300B1AEA2 /* Main.storyboard */; };
 		9873DFF82107BEC400B1AEA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9873DFF72107BEC400B1AEA2 /* Assets.xcassets */; };
 		9873DFFB2107BEC400B1AEA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9873DFF92107BEC400B1AEA2 /* LaunchScreen.storyboard */; };
 		9873E0032107BF3300B1AEA2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9873E0022107BF3300B1AEA2 /* GoogleService-Info.plist */; };
+		98B409352108D4020021B2AA /* big_noodle_titling_oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98B409332108D4010021B2AA /* big_noodle_titling_oblique.ttf */; };
+		98B409362108D4020021B2AA /* big_noodle_titling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98B409342108D4020021B2AA /* big_noodle_titling.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		178B74B14006DDB421D860AE /* Pods-Gunpla Life.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gunpla Life.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gunpla Life/Pods-Gunpla Life.release.xcconfig"; sourceTree = "<group>"; };
 		29CFE835BE5F5F9E1A22F250 /* Pods-Gunpla Life.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gunpla Life.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gunpla Life/Pods-Gunpla Life.debug.xcconfig"; sourceTree = "<group>"; };
 		6A7CEA7264D530CD8C63E8F1 /* Pods_Gunpla_Life.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gunpla_Life.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		984184A221092AF000EEB247 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		984184A521092C3500EEB247 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		984184A921092EF900EEB247 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		984184AB2109308900EEB247 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		9873DFED2107BEC300B1AEA2 /* Gunpla Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gunpla Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9873DFF02107BEC300B1AEA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9873DFF22107BEC300B1AEA2 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -28,6 +38,8 @@
 		9873DFFA2107BEC400B1AEA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9873DFFC2107BEC400B1AEA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9873E0022107BF3300B1AEA2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		98B409332108D4010021B2AA /* big_noodle_titling_oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling_oblique.ttf; sourceTree = "<group>"; };
+		98B409342108D4020021B2AA /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		984184A421092C1F00EEB247 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				984184A521092C3500EEB247 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		9873DFE42107BEC300B1AEA2 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +100,7 @@
 		9873DFEF2107BEC300B1AEA2 /* Gunpla Life */ = {
 			isa = PBXGroup;
 			children = (
+				984184A421092C1F00EEB247 /* Utilities */,
 				98E687A52107C42F00528E50 /* Model */,
 				98E687A62107C43400528E50 /* View */,
 				98E687A72107C43A00528E50 /* Controller */,
@@ -89,8 +110,18 @@
 				9873DFF92107BEC400B1AEA2 /* LaunchScreen.storyboard */,
 				9873DFFC2107BEC400B1AEA2 /* Info.plist */,
 				9873E0022107BF3300B1AEA2 /* GoogleService-Info.plist */,
+				98B409322108D3DC0021B2AA /* Resources */,
 			);
 			path = "Gunpla Life";
+			sourceTree = "<group>";
+		};
+		98B409322108D3DC0021B2AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				98B409332108D4010021B2AA /* big_noodle_titling_oblique.ttf */,
+				98B409342108D4020021B2AA /* big_noodle_titling.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		98E687A52107C42F00528E50 /* Model */ = {
@@ -103,6 +134,9 @@
 		98E687A62107C43400528E50 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				984184A221092AF000EEB247 /* CustomView.swift */,
+				984184A921092EF900EEB247 /* CustomTextField.swift */,
+				984184AB2109308900EEB247 /* CustomButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,7 +211,9 @@
 			files = (
 				9873DFFB2107BEC400B1AEA2 /* LaunchScreen.storyboard in Resources */,
 				9873E0032107BF3300B1AEA2 /* GoogleService-Info.plist in Resources */,
+				98B409362108D4020021B2AA /* big_noodle_titling.ttf in Resources */,
 				9873DFF82107BEC400B1AEA2 /* Assets.xcassets in Resources */,
+				98B409352108D4020021B2AA /* big_noodle_titling_oblique.ttf in Resources */,
 				9873DFF62107BEC300B1AEA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,7 +271,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9873DFF32107BEC300B1AEA2 /* LoginVC.swift in Sources */,
+				984184A321092AF000EEB247 /* CustomView.swift in Sources */,
+				984184AC2109308900EEB247 /* CustomButton.swift in Sources */,
 				9873DFF12107BEC300B1AEA2 /* AppDelegate.swift in Sources */,
+				984184A621092C3500EEB247 /* Constants.swift in Sources */,
+				984184AA21092EF900EEB247 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
