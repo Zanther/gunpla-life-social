@@ -12,6 +12,7 @@
 		984184A621092C3500EEB247 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984184A521092C3500EEB247 /* Constants.swift */; };
 		984184AA21092EF900EEB247 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984184A921092EF900EEB247 /* CustomTextField.swift */; };
 		984184AC2109308900EEB247 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984184AB2109308900EEB247 /* CustomButton.swift */; };
+		984184AE2109338200EEB247 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 984184AD2109338200EEB247 /* GoogleService-Info.plist */; };
 		9873DFF12107BEC300B1AEA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873DFF02107BEC300B1AEA2 /* AppDelegate.swift */; };
 		9873DFF32107BEC300B1AEA2 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873DFF22107BEC300B1AEA2 /* LoginVC.swift */; };
 		9873DFF62107BEC300B1AEA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9873DFF42107BEC300B1AEA2 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		984184A521092C3500EEB247 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		984184A921092EF900EEB247 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		984184AB2109308900EEB247 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		984184AD2109338200EEB247 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9873DFED2107BEC300B1AEA2 /* Gunpla Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gunpla Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9873DFF02107BEC300B1AEA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9873DFF22107BEC300B1AEA2 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				9873DFF72107BEC400B1AEA2 /* Assets.xcassets */,
 				9873DFF92107BEC400B1AEA2 /* LaunchScreen.storyboard */,
 				9873DFFC2107BEC400B1AEA2 /* Info.plist */,
+				984184AD2109338200EEB247 /* GoogleService-Info.plist */,
 				98B409322108D3DC0021B2AA /* Resources */,
 			);
 			path = "Gunpla Life";
@@ -158,6 +161,7 @@
 				9873DFEA2107BEC300B1AEA2 /* Frameworks */,
 				9873DFEB2107BEC300B1AEA2 /* Resources */,
 				0A3FA1C2E0432981F165B86B /* [CP] Embed Pods Frameworks */,
+				9A4D9ED33DEBECC046128E2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,6 +215,7 @@
 				9873DFF82107BEC400B1AEA2 /* Assets.xcassets in Resources */,
 				98B409352108D4020021B2AA /* big_noodle_titling_oblique.ttf in Resources */,
 				9873DFF62107BEC300B1AEA2 /* Main.storyboard in Resources */,
+				984184AE2109338200EEB247 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +229,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Gunpla Life/Pods-Gunpla Life-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -231,6 +240,10 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -257,6 +270,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A4D9ED33DEBECC046128E2C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gunpla Life/Pods-Gunpla Life-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gunpla Life/Pods-Gunpla Life-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

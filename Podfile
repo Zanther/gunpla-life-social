@@ -11,5 +11,7 @@ target 'Gunpla Life' do
 	pod 'Firebase/Database'
 	pod 'Firebase/Auth'
 	pod 'Firebase/Storage'
+	pod 'FBSDKLoginKit'
+	pod 'GoogleSignIn'
 
 end

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -160,6 +160,9 @@
                                                                 <include reference="Rt9-E1-JOz"/>
                                                             </mask>
                                                         </variation>
+                                                        <connections>
+                                                            <action selector="fbLoginBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3vl-MT-Cae"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiX-mD-QrM">
                                                         <rect key="frame" x="69" y="0.0" width="44" height="44"/>
@@ -177,6 +180,9 @@
                                                                 <include reference="aXj-RT-1Jq"/>
                                                             </mask>
                                                         </variation>
+                                                        <connections>
+                                                            <action selector="googleLoginBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VCD-KF-Wxe"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -289,6 +295,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="fbLoginBtn" destination="nhN-gU-dVo" id="eRU-aG-sbz"/>
+                        <outlet property="googleLoginBtn" destination="aiX-mD-QrM" id="ggP-Si-qSl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
