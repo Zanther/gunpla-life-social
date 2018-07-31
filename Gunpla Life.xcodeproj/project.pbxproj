@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7CACB22D3A923532D8FC3333 /* Pods_Gunpla_Life.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7CEA7264D530CD8C63E8F1 /* Pods_Gunpla_Life.framework */; };
+		9801F41A210BB8960073C9EA /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801F418210BB8960073C9EA /* KeychainItemAccessibility.swift */; };
+		9801F41B210BB8960073C9EA /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801F419210BB8960073C9EA /* KeychainWrapper.swift */; };
+		9801F41E210BBE210073C9EA /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801F41D210BBE210073C9EA /* FeedVC.swift */; };
 		984184A321092AF000EEB247 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984184A221092AF000EEB247 /* CustomView.swift */; };
 		984184A621092C3500EEB247 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984184A521092C3500EEB247 /* Constants.swift */; };
 		984184AA21092EF900EEB247 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984184A921092EF900EEB247 /* CustomTextField.swift */; };
@@ -20,12 +23,19 @@
 		9873DFFB2107BEC400B1AEA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9873DFF92107BEC400B1AEA2 /* LaunchScreen.storyboard */; };
 		98B409352108D4020021B2AA /* big_noodle_titling_oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98B409332108D4010021B2AA /* big_noodle_titling_oblique.ttf */; };
 		98B409362108D4020021B2AA /* big_noodle_titling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98B409342108D4020021B2AA /* big_noodle_titling.ttf */; };
+		98CD8948210F9D2400695F6D /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CD8947210F9D2400695F6D /* CircleImageView.swift */; };
+		98CD894A210FBDFF00695F6D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CD8949210FBDFF00695F6D /* PostCell.swift */; };
+		98CD894C210FCCFE00695F6D /* RoundedCornerImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CD894B210FCCFE00695F6D /* RoundedCornerImgView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		178B74B14006DDB421D860AE /* Pods-Gunpla Life.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gunpla Life.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gunpla Life/Pods-Gunpla Life.release.xcconfig"; sourceTree = "<group>"; };
 		29CFE835BE5F5F9E1A22F250 /* Pods-Gunpla Life.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gunpla Life.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gunpla Life/Pods-Gunpla Life.debug.xcconfig"; sourceTree = "<group>"; };
 		6A7CEA7264D530CD8C63E8F1 /* Pods_Gunpla_Life.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gunpla_Life.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9801F418210BB8960073C9EA /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		9801F419210BB8960073C9EA /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		9801F41C210BB9A20073C9EA /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftKeychainWrapper.h; sourceTree = "<group>"; };
+		9801F41D210BBE210073C9EA /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		984184A221092AF000EEB247 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		984184A521092C3500EEB247 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		984184A921092EF900EEB247 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -40,6 +50,9 @@
 		9873DFFC2107BEC400B1AEA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98B409332108D4010021B2AA /* big_noodle_titling_oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling_oblique.ttf; sourceTree = "<group>"; };
 		98B409342108D4020021B2AA /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling.ttf; sourceTree = "<group>"; };
+		98CD8947210F9D2400695F6D /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		98CD8949210FBDFF00695F6D /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		98CD894B210FCCFE00695F6D /* RoundedCornerImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerImgView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				984184A521092C3500EEB247 /* Constants.swift */,
+				9801F418210BB8960073C9EA /* KeychainItemAccessibility.swift */,
+				9801F419210BB8960073C9EA /* KeychainWrapper.swift */,
+				9801F41C210BB9A20073C9EA /* SwiftKeychainWrapper.h */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -137,6 +153,9 @@
 				984184A221092AF000EEB247 /* CustomView.swift */,
 				984184A921092EF900EEB247 /* CustomTextField.swift */,
 				984184AB2109308900EEB247 /* CustomButton.swift */,
+				98CD8947210F9D2400695F6D /* CircleImageView.swift */,
+				98CD8949210FBDFF00695F6D /* PostCell.swift */,
+				98CD894B210FCCFE00695F6D /* RoundedCornerImgView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -145,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				9873DFF22107BEC300B1AEA2 /* LoginVC.swift */,
+				9801F41D210BBE210073C9EA /* FeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -297,11 +317,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9801F41E210BBE210073C9EA /* FeedVC.swift in Sources */,
 				9873DFF32107BEC300B1AEA2 /* LoginVC.swift in Sources */,
 				984184A321092AF000EEB247 /* CustomView.swift in Sources */,
+				98CD894C210FCCFE00695F6D /* RoundedCornerImgView.swift in Sources */,
 				984184AC2109308900EEB247 /* CustomButton.swift in Sources */,
 				9873DFF12107BEC300B1AEA2 /* AppDelegate.swift in Sources */,
 				984184A621092C3500EEB247 /* Constants.swift in Sources */,
+				9801F41B210BB8960073C9EA /* KeychainWrapper.swift in Sources */,
+				9801F41A210BB8960073C9EA /* KeychainItemAccessibility.swift in Sources */,
+				98CD894A210FBDFF00695F6D /* PostCell.swift in Sources */,
+				98CD8948210F9D2400695F6D /* CircleImageView.swift in Sources */,
 				984184AA21092EF900EEB247 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

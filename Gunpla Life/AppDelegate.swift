@@ -12,7 +12,7 @@ import FBSDKCoreKit
 import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
     var window: UIWindow?
@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
         
         return true
     }
@@ -47,21 +46,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     
     
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        
-        if let error = error {
-            
-            print("Sign In Error: \(error)")
-            
-            return
-        }
-        
-        guard let authentication = user.authentication else { return }
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
-        
-        print("Success!: \(credential)")
-        
-    }
+//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+//
+//        if let error = error {
+//
+//            print("Sign In Error: \(error)")
+//
+//            return
+//        }
+//
+//        guard let authentication = user.authentication else { return }
+//        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+//        self.firebaseAuth(credential)
+//
+//        print("Success!: \(credential)")
+//
+//    }
+//
+//    func firebaseAuth(_ credential: AuthCredential) {
+//        //        Auth.auth().signIn(with: credential) { (user, error) in
+//        Auth.auth().signInAndRetrieveData(with: credential) { (user, error) in
+//            if (error != nil) {
+//                print("Unable to sign in")
+//            } else {
+//                print("Sucessful Sign In With Firebase\n\(String(describing: user?.user.uid))\n\(String(describing:user?.user.displayName))")
+//                if let user = user {
+//                    let keychainResult = KeychainWrapper.standard.set(user.user.uid, forKey: KEY_UID)
+//                    print("User Data Saved To Keychain: \(String(describing: keychainResult))")
+//                }
+//            }
+//        }
+//    }
 
 //    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
 //

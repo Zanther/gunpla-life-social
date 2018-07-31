@@ -13,5 +13,6 @@ target 'Gunpla Life' do
 	pod 'Firebase/Storage'
 	pod 'FBSDKLoginKit'
 	pod 'GoogleSignIn'
+	
 
 end
