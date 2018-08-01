@@ -31,7 +31,9 @@ class LoginVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         }
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
-    
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,6 +45,11 @@ class LoginVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
             //user is signed out
             print("No user logged in")
         }
+     }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     @IBAction func googleLoginBtnTapped(_ sender: Any) {
@@ -51,18 +58,20 @@ class LoginVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
 
     }
     
+    
+    
     @IBAction func fbLoginBtnTapped(_ sender: Any) {
         
         let facebookLogin = FBSDKLoginManager()
         
-        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
+        facebookLogin.logIn(withReadPermissions: ["public_profile"], from: self) { (result, error) in
             
             if error != nil {
                 print("Unable to Authenticate with Facebook - \(String(describing: error))")
             } else if result?.isCancelled == true {
                 print("User Canceled Facebook Login")
             } else {
-                print("Successfully Logged in")
+                print("Successfully Logged into Facebook")
                 let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuth(credential)
             }
@@ -77,7 +86,9 @@ class LoginVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
                 if error == nil {
                     print("Signed In Successfully with Email")
                     if let user = user {
-                        self.completeSignIn(id: user.user.uid)
+                        let last_login = NSDate()
+                        let userData = ["last-login":"\(last_login)"]
+                        self.completeSignIn(id: user.user.uid, userData: userData)
                     }
                 } else {
                     
@@ -88,7 +99,9 @@ class LoginVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
                         } else {
                             print("Successfully Authenticated with Firebase")
                             if let user = user {
-                                self.completeSignIn(id: user.user.uid)
+                                let userData = DataService.dataService.createEmailUser(login_method: user.user.providerID, account_created:NSDate(),
+                                                                                  email:user.user.email!)
+                                self.completeSignIn(id: user.user.uid, userData: userData)
                             }
                         }
                     })
@@ -96,9 +109,7 @@ class LoginVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
             }
         }
     }
-    
-    
-    
+
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
         if let error = error {
@@ -117,19 +128,35 @@ class LoginVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
             if (error != nil) {
                 print("Unable to sign in\nError: \(String(describing: error))")
             } else {
-                print("Sucessful Sign In With Firebase\n\(String(describing: user?.user.uid))\n\(String(describing:user?.user.displayName))")
+                print("Sucessful Sign In With Firebase:\nUser ID:\(String(describing: user?.user.uid))\nDisplay Name:\(String(describing:user?.user.displayName))\nEmail:\(String(describing: user?.user.email))\nPhoto Url:\(String(describing: user?.user.photoURL))")
                 if let user = user {
-                    self.completeSignIn(id: user.user.uid)
+                    if credential.provider == "google.com" {
+                    let userData = DataService.dataService.createSocialUser(login_method:credential.provider, last_login:NSDate(), name: user.user.displayName!, email:user.user.email!)
+                        self.completeSignIn(id: user.user.uid, userData: userData)
+                    } else {
+                        let userData = DataService.dataService.createSocialUser(login_method:credential.provider, last_login:NSDate(), name: user.user.displayName!, email:"")
+                        self.completeSignIn(id: user.user.uid, userData: userData)
+                    }
                 }
             }
         }
     }
-    func completeSignIn(id: String) {
+    func completeSignIn(id: String, userData: Dictionary<String, Any>) {
         
+    DataService.dataService.createFirebaseDBUser(uid: id, userData: userData)
+
      let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("User Data Saved To Keychain: \(String(describing: keychainResult))")
         performSegue(withIdentifier: "goToFeed", sender: nil)
-
+        self.emailTextField.text = ""
+        self.passwordTextField.text = ""
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
 }
 

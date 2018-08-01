@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GNX-EO-0tK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -73,11 +73,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5BU-HL-bKA" customClass="CustomView" customModule="Gunpla_Life" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="728"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ggv2logo_fullsize_3" translatesAutoresizingMaskIntoConstraints="NO" id="njG-vF-Qwb">
-                                        <rect key="frame" x="27" y="60" width="321" height="170"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gglogo" translatesAutoresizingMaskIntoConstraints="NO" id="njG-vF-Qwb">
+                                        <rect key="frame" x="27" y="60" width="321" height="168"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3ix-UC-Zkt">
-                                        <rect key="frame" x="8" y="330" width="359" height="200"/>
+                                        <rect key="frame" x="8" y="328" width="359" height="200"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login/Sign up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0o-eT-tHZ">
                                                 <rect key="frame" x="134" y="0.0" width="91.333333333333314" height="24"/>
@@ -309,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-441" y="122"/>
+            <point key="canvasLocation" x="-529" y="-163"/>
         </scene>
         <!--FeedVC-->
         <scene sceneID="iD4-X8-KXG">
@@ -329,18 +329,18 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RWN-dD-4KW">
-                                            <rect key="frame" x="0.0" y="17" width="375" height="795"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <prototypes>
-                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCell" rowHeight="420" id="PSQ-g0-Ho7" customClass="PostCell" customModule="Gunpla_Life" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="28" width="375" height="420"/>
+                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCell" rowHeight="444" id="PSQ-g0-Ho7" customClass="PostCell" customModule="Gunpla_Life" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="28" width="375" height="444"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PSQ-g0-Ho7" id="JB0-Qq-ZFj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="419.66666666666669"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="443.66666666666669"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVq-uW-XFv" customClass="CustomView" customModule="Gunpla_Life" customModuleProvider="target">
-                                                                <rect key="frame" x="15" y="11" width="345" height="392"/>
+                                                                <rect key="frame" x="15" y="17" width="345" height="410"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Ls-cT-Q10" userLabel="User &amp; Title Stack">
                                                                         <rect key="frame" x="-7" y="0.0" width="352" height="33"/>
@@ -361,16 +361,16 @@
                                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="9oA-yi-qbA" userLabel="Likes Stack">
                                                                                 <rect key="frame" x="284.33333333333331" y="0.0" width="67.666666666666686" height="33"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123456" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWL-4g-G02">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123456" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWL-4g-G02">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="36" height="33"/>
                                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
-                                                                                        <color key="textColor" red="0.29803921570000003" green="0.66274509800000003" blue="0.87058823529999996" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <color key="textColor" red="0.28307123783268523" green="0.63426448031383054" blue="0.83275485706724139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpV-7s-ON7">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpV-7s-ON7">
                                                                                         <rect key="frame" x="39" y="0.0" width="28.666666666666671" height="33"/>
                                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
-                                                                                        <color key="textColor" red="0.29803921570000003" green="0.66274509800000003" blue="0.87058823529999996" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <color key="textColor" red="0.28307123783268523" green="0.63426448031383054" blue="0.83275485706724139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                 </subviews>
@@ -383,8 +383,9 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dQX-zw-3tO" userLabel="Image &amp; Desc Stack">
                                                                         <rect key="frame" x="0.0" y="38" width="345" height="365"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="post_default" translatesAutoresizingMaskIntoConstraints="NO" id="Azk-Kh-b4h" customClass="RoundedCornerImgView" customModule="Gunpla_Life" customModuleProvider="target">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Azk-Kh-b4h" customClass="RoundedCornerImgView" customModule="Gunpla_Life" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="300"/>
+                                                                                <color key="backgroundColor" white="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="300" id="H7H-37-aRc"/>
                                                                                     <constraint firstAttribute="width" constant="345" id="uyt-zS-oEy"/>
@@ -396,7 +397,7 @@
                                                                                     <constraint firstAttribute="height" constant="65" id="c1K-PB-uFA"/>
                                                                                 </constraints>
                                                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="11"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="13"/>
                                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                             </textView>
                                                                         </subviews>
@@ -406,14 +407,14 @@
                                                                         </constraints>
                                                                     </stackView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grey_heart" translatesAutoresizingMaskIntoConstraints="NO" id="R6m-iW-nFV">
-                                                                        <rect key="frame" x="310" y="307" width="50" height="50"/>
+                                                                        <rect key="frame" x="310" y="311" width="50" height="50"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="50" id="gMv-DV-Wk7"/>
                                                                             <constraint firstAttribute="width" constant="50" id="jId-SL-I7a"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGv-x0-mMp">
-                                                                        <rect key="frame" x="310" y="294" width="50" height="75"/>
+                                                                        <rect key="frame" x="310" y="297" width="50" height="75"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="75" id="3uL-JR-pRe"/>
                                                                             <constraint firstAttribute="width" constant="50" id="8xk-iM-SYA"/>
@@ -430,16 +431,16 @@
                                                                     <constraint firstItem="3Ls-cT-Q10" firstAttribute="leading" secondItem="gVq-uW-XFv" secondAttribute="leading" constant="-7" id="Q0f-Lg-0YQ"/>
                                                                     <constraint firstAttribute="trailing" secondItem="3Ls-cT-Q10" secondAttribute="trailing" id="fgS-bp-YnY"/>
                                                                     <constraint firstItem="dQX-zw-3tO" firstAttribute="leading" secondItem="gVq-uW-XFv" secondAttribute="leading" id="g4X-q3-6GN"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="YGv-x0-mMp" secondAttribute="bottom" constant="23" id="h7I-sO-iAq"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="YGv-x0-mMp" secondAttribute="bottom" constant="38" id="h7I-sO-iAq"/>
                                                                     <constraint firstAttribute="trailing" secondItem="R6m-iW-nFV" secondAttribute="trailing" constant="-15" id="qhq-oB-Arl"/>
                                                                     <constraint firstItem="dQX-zw-3tO" firstAttribute="top" secondItem="3Ls-cT-Q10" secondAttribute="bottom" constant="5" id="tvJ-Yi-bci"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="R6m-iW-nFV" secondAttribute="bottom" constant="35" id="txR-t3-X6X"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="R6m-iW-nFV" secondAttribute="bottom" constant="49" id="txR-t3-X6X"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="bottomMargin" secondItem="gVq-uW-XFv" secondAttribute="bottom" constant="6" id="HbM-vk-XvU"/>
-                                                            <constraint firstItem="gVq-uW-XFv" firstAttribute="top" secondItem="JB0-Qq-ZFj" secondAttribute="topMargin" id="blb-0q-RRB"/>
+                                                            <constraint firstItem="gVq-uW-XFv" firstAttribute="top" secondItem="JB0-Qq-ZFj" secondAttribute="topMargin" constant="6" id="blb-0q-RRB"/>
                                                             <constraint firstItem="gVq-uW-XFv" firstAttribute="leading" secondItem="JB0-Qq-ZFj" secondAttribute="leadingMargin" id="cux-1c-vIF"/>
                                                             <constraint firstAttribute="trailingMargin" secondItem="gVq-uW-XFv" secondAttribute="trailing" id="lJ0-Fm-Bvl"/>
                                                         </constraints>
@@ -448,13 +449,19 @@
                                                         <outlet property="descTxtField" destination="JH7-BI-XnA" id="yG2-zP-UpA"/>
                                                         <outlet property="heartImgView" destination="R6m-iW-nFV" id="bHU-AN-cAb"/>
                                                         <outlet property="likesCountLbl" destination="rWL-4g-G02" id="YNW-l2-NpI"/>
-                                                        <outlet property="mainImgViewPost" destination="Azk-Kh-b4h" id="Jy3-Tb-zj8"/>
+                                                        <outlet property="postMainImgView" destination="Azk-Kh-b4h" id="R3x-Je-cpX"/>
                                                         <outlet property="userImgView" destination="3XG-ID-jeE" id="k3t-PK-1BL"/>
                                                         <outlet property="usernameLbl" destination="KqV-qk-W64" id="DfD-nw-Xk5"/>
                                                     </connections>
                                                 </tableViewCell>
                                             </prototypes>
                                         </tableView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="TSr-YK-pmy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="90" id="RAf-lP-JiX"/>
+                                            </constraints>
+                                        </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OY7-jO-wnR">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <subviews>
@@ -498,58 +505,88 @@
                                                 <constraint firstItem="PfA-lW-gXB" firstAttribute="top" secondItem="OY7-jO-wnR" secondAttribute="top" constant="44" id="soB-78-Boa"/>
                                             </constraints>
                                         </view>
+                                        <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KIW-1M-Rkv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B06-gV-rd8" customClass="CustomView" customModule="Gunpla_Life" customModuleProvider="target">
-                                            <rect key="frame" x="13" y="115" width="349" height="50"/>
+                                            <rect key="frame" x="13" y="115" width="349" height="353"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gas-Yw-T9S">
-                                                    <rect key="frame" x="8" y="8" width="333" height="34"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Aau-FK-5b5">
+                                                    <rect key="frame" x="8" y="8" width="333" height="337"/>
                                                     <subviews>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="60p-cs-qBG">
-                                                            <rect key="frame" x="0.0" y="0.0" width="273" height="34"/>
-                                                            <nil key="textColor"/>
-                                                            <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
-                                                            <textInputTraits key="textInputTraits"/>
-                                                        </textField>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxm-q9-gbr" customClass="CustomButton" customModule="Gunpla_Life" customModuleProvider="target">
-                                                            <rect key="frame" x="283" y="0.0" width="50" height="34"/>
-                                                            <color key="backgroundColor" red="0.098287756320000003" green="0.57020494700000002" blue="0.77277264970000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gas-Yw-T9S">
+                                                            <rect key="frame" x="0.0" y="0.0" width="333" height="34"/>
+                                                            <subviews>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="60p-cs-qBG">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="273" height="34"/>
+                                                                    <nil key="textColor"/>
+                                                                    <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="17"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxm-q9-gbr" customClass="CustomButton" customModule="Gunpla_Life" customModuleProvider="target">
+                                                                    <rect key="frame" x="283" y="0.0" width="50" height="34"/>
+                                                                    <color key="backgroundColor" red="0.098287756320000003" green="0.57020494700000002" blue="0.77277264970000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="34" id="9n1-3g-Edi"/>
+                                                                        <constraint firstAttribute="width" constant="50" id="uUK-3P-GL0"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="18"/>
+                                                                    <state key="normal" title="submit">
+                                                                        <color key="titleColor" red="0.93990851679999998" green="0.92732154170000003" blue="0.87250401789999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="emailLoginBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V1s-IJ-jTJ"/>
+                                                                        <action selector="submitPostBtnTapped:" destination="GNX-EO-0tK" eventType="touchUpInside" id="1yj-yO-gxA"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2NY-xD-73L">
+                                                            <rect key="frame" x="0.0" y="44" width="333" height="293"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F7R-pb-bdH" customClass="RoundedCornerImgView" customModule="Gunpla_Life" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="333" height="293"/>
+                                                                </imageView>
+                                                            </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="34" id="9n1-3g-Edi"/>
-                                                                <constraint firstAttribute="width" constant="50" id="uUK-3P-GL0"/>
+                                                                <constraint firstAttribute="bottom" secondItem="F7R-pb-bdH" secondAttribute="bottom" id="6rY-A1-WM1"/>
+                                                                <constraint firstItem="F7R-pb-bdH" firstAttribute="top" secondItem="2NY-xD-73L" secondAttribute="top" id="au1-rY-gsi"/>
+                                                                <constraint firstItem="F7R-pb-bdH" firstAttribute="leading" secondItem="2NY-xD-73L" secondAttribute="leading" id="cmp-qS-LUb"/>
+                                                                <constraint firstAttribute="trailing" secondItem="F7R-pb-bdH" secondAttribute="trailing" id="wBm-ck-fjJ"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="18"/>
-                                                            <state key="normal" title="submit">
-                                                                <color key="titleColor" red="0.93990851679999998" green="0.92732154170000003" blue="0.87250401789999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
-                                                            <connections>
-                                                                <action selector="emailLoginBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V1s-IJ-jTJ"/>
-                                                                <action selector="submitPostBtnTapped:" destination="GNX-EO-0tK" eventType="touchUpInside" id="1yj-yO-gxA"/>
-                                                            </connections>
-                                                        </button>
+                                                        </stackView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="gas-Yw-T9S" secondAttribute="bottom" constant="8" id="FTj-mY-M3y"/>
-                                                <constraint firstAttribute="height" constant="50" id="JeF-Y3-Dty"/>
-                                                <constraint firstAttribute="trailing" secondItem="gas-Yw-T9S" secondAttribute="trailing" constant="8" id="R83-OK-4xZ"/>
-                                                <constraint firstItem="gas-Yw-T9S" firstAttribute="leading" secondItem="B06-gV-rd8" secondAttribute="leading" constant="8" id="dom-TH-2Ip"/>
-                                                <constraint firstItem="gas-Yw-T9S" firstAttribute="top" secondItem="B06-gV-rd8" secondAttribute="top" constant="8" id="k3Z-zp-JfE"/>
+                                                <constraint firstAttribute="bottom" secondItem="Aau-FK-5b5" secondAttribute="bottom" constant="8" id="E3K-Ph-Dcl"/>
+                                                <constraint firstAttribute="height" constant="353" id="JeF-Y3-Dty"/>
+                                                <constraint firstItem="Aau-FK-5b5" firstAttribute="leading" secondItem="B06-gV-rd8" secondAttribute="leading" constant="8" id="M67-vF-Peo"/>
+                                                <constraint firstAttribute="trailing" secondItem="Aau-FK-5b5" secondAttribute="trailing" constant="8" id="pnx-0n-9TZ"/>
+                                                <constraint firstItem="Aau-FK-5b5" firstAttribute="top" secondItem="B06-gV-rd8" secondAttribute="top" constant="8" id="uPa-wc-ngz"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="KIW-1M-Rkv" secondAttribute="trailing" id="1no-yZ-HkU"/>
                                         <constraint firstItem="RWN-dD-4KW" firstAttribute="leading" secondItem="mb0-J4-r9G" secondAttribute="leading" id="2cd-eZ-hqt"/>
+                                        <constraint firstItem="TSr-YK-pmy" firstAttribute="top" secondItem="mb0-J4-r9G" secondAttribute="top" id="4hH-JN-R6j"/>
+                                        <constraint firstItem="TSr-YK-pmy" firstAttribute="leading" secondItem="mb0-J4-r9G" secondAttribute="leading" id="4oI-S1-h2s"/>
                                         <constraint firstAttribute="trailing" secondItem="B06-gV-rd8" secondAttribute="trailing" constant="13" id="9lN-Ra-vsb"/>
                                         <constraint firstAttribute="bottom" secondItem="RWN-dD-4KW" secondAttribute="bottom" id="CJ4-ty-lqi"/>
                                         <constraint firstItem="OY7-jO-wnR" firstAttribute="leading" secondItem="mb0-J4-r9G" secondAttribute="leading" id="GbF-Ur-xFf"/>
                                         <constraint firstAttribute="trailing" secondItem="RWN-dD-4KW" secondAttribute="trailing" id="L40-1f-DZw"/>
                                         <constraint firstItem="OY7-jO-wnR" firstAttribute="top" secondItem="mb0-J4-r9G" secondAttribute="top" id="MOL-xB-GaN"/>
+                                        <constraint firstAttribute="bottom" secondItem="KIW-1M-Rkv" secondAttribute="bottom" id="WIM-iv-bGl"/>
+                                        <constraint firstItem="KIW-1M-Rkv" firstAttribute="top" secondItem="mb0-J4-r9G" secondAttribute="top" id="Y9e-PU-0YG"/>
                                         <constraint firstItem="B06-gV-rd8" firstAttribute="top" secondItem="OY7-jO-wnR" secondAttribute="bottom" constant="25" id="fOU-aX-hLi"/>
-                                        <constraint firstItem="RWN-dD-4KW" firstAttribute="top" secondItem="B06-gV-rd8" secondAttribute="bottom" constant="-148" id="foX-EW-fvH"/>
+                                        <constraint firstItem="RWN-dD-4KW" firstAttribute="top" secondItem="B06-gV-rd8" secondAttribute="bottom" constant="-468" id="foX-EW-fvH"/>
                                         <constraint firstItem="B06-gV-rd8" firstAttribute="leading" secondItem="mb0-J4-r9G" secondAttribute="leading" constant="13" id="maB-bA-hpO"/>
+                                        <constraint firstAttribute="trailing" secondItem="TSr-YK-pmy" secondAttribute="trailing" id="tNo-hU-rHV"/>
                                         <constraint firstAttribute="trailing" secondItem="OY7-jO-wnR" secondAttribute="trailing" id="wYa-QI-6a0"/>
+                                        <constraint firstItem="KIW-1M-Rkv" firstAttribute="leading" secondItem="mb0-J4-r9G" secondAttribute="leading" id="yjC-SP-b0B"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="light"/>
@@ -570,26 +607,29 @@
                     </view>
                     <connections>
                         <outlet property="addPostBtn" destination="gy9-C9-bVI" id="DbG-l0-AaL"/>
+                        <outlet property="blackBG" destination="KIW-1M-Rkv" id="NFm-eu-JWp"/>
                         <outlet property="captionTextField" destination="60p-cs-qBG" id="GJK-DQ-S1E"/>
                         <outlet property="feedTableView" destination="RWN-dD-4KW" id="ano-Sq-D4e"/>
                         <outlet property="headerView" destination="OY7-jO-wnR" id="eVF-pd-MUi"/>
                         <outlet property="submitPostBtn" destination="Qxm-q9-gbr" id="Ayt-yR-uu7"/>
                         <outlet property="submitPostView" destination="B06-gV-rd8" id="Mz8-An-ugk"/>
+                        <outlet property="submitThisImage" destination="F7R-pb-bdH" id="ht2-F5-zGj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zh8-vE-3AT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="352.80000000000001" y="34.729064039408868"/>
+            <point key="canvasLocation" x="380" y="-216"/>
         </scene>
     </scenes>
     <resources>
         <image name="addPost" width="50" height="52"/>
         <image name="facebook-login" width="94" height="94"/>
+        <image name="gglogo" width="317" height="157"/>
         <image name="ggv2logo_fullsize_3" width="340" height="170"/>
         <image name="google-login" width="91" height="92"/>
+        <image name="gradient" width="168" height="81"/>
         <image name="grey_heart" width="40" height="33"/>
         <image name="gunplalife_bg" width="1432" height="1050"/>
-        <image name="post_default" width="1920" height="1237"/>
         <image name="profile_pic" width="737" height="737"/>
     </resources>
 </document>

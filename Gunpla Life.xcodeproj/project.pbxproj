@@ -21,6 +21,8 @@
 		9873DFF62107BEC300B1AEA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9873DFF42107BEC300B1AEA2 /* Main.storyboard */; };
 		9873DFF82107BEC400B1AEA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9873DFF72107BEC400B1AEA2 /* Assets.xcassets */; };
 		9873DFFB2107BEC400B1AEA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9873DFF92107BEC400B1AEA2 /* LaunchScreen.storyboard */; };
+		9877218D2110A3EB00BAADF9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9877218C2110A3EB00BAADF9 /* DataService.swift */; };
+		988FAE3B2111209600529323 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988FAE3A2111209600529323 /* Post.swift */; };
 		98B409352108D4020021B2AA /* big_noodle_titling_oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98B409332108D4010021B2AA /* big_noodle_titling_oblique.ttf */; };
 		98B409362108D4020021B2AA /* big_noodle_titling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98B409342108D4020021B2AA /* big_noodle_titling.ttf */; };
 		98CD8948210F9D2400695F6D /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CD8947210F9D2400695F6D /* CircleImageView.swift */; };
@@ -48,6 +50,8 @@
 		9873DFF72107BEC400B1AEA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9873DFFA2107BEC400B1AEA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9873DFFC2107BEC400B1AEA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9877218C2110A3EB00BAADF9 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		988FAE3A2111209600529323 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		98B409332108D4010021B2AA /* big_noodle_titling_oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling_oblique.ttf; sourceTree = "<group>"; };
 		98B409342108D4020021B2AA /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling.ttf; sourceTree = "<group>"; };
 		98CD8947210F9D2400695F6D /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 		9873DFEF2107BEC300B1AEA2 /* Gunpla Life */ = {
 			isa = PBXGroup;
 			children = (
+				9877218B2110A3D000BAADF9 /* Services */,
 				984184A421092C1F00EEB247 /* Utilities */,
 				98E687A52107C42F00528E50 /* Model */,
 				98E687A62107C43400528E50 /* View */,
@@ -131,6 +136,14 @@
 			path = "Gunpla Life";
 			sourceTree = "<group>";
 		};
+		9877218B2110A3D000BAADF9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9877218C2110A3EB00BAADF9 /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		98B409322108D3DC0021B2AA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +156,7 @@
 		98E687A52107C42F00528E50 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				988FAE3A2111209600529323 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,9 +332,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9801F41E210BBE210073C9EA /* FeedVC.swift in Sources */,
+				9877218D2110A3EB00BAADF9 /* DataService.swift in Sources */,
 				9873DFF32107BEC300B1AEA2 /* LoginVC.swift in Sources */,
 				984184A321092AF000EEB247 /* CustomView.swift in Sources */,
 				98CD894C210FCCFE00695F6D /* RoundedCornerImgView.swift in Sources */,
+				988FAE3B2111209600529323 /* Post.swift in Sources */,
 				984184AC2109308900EEB247 /* CustomButton.swift in Sources */,
 				9873DFF12107BEC300B1AEA2 /* AppDelegate.swift in Sources */,
 				984184A621092C3500EEB247 /* Constants.swift in Sources */,
