@@ -23,18 +23,18 @@
 	<key>STORAGE_BUCKET</key>
 	<string>gunpla-life.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:732297959409:ios:4654f115d509dcde</string>
 	<key>DATABASE_URL</key>
-	<string>https://gunpla-life.firebaseio.com</string>
+	<string>https://gunpla-life.firebaseio.com/</string>
 </dict>
 </plist>

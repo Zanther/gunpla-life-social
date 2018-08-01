@@ -45,44 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return googleDidHandle || facebookDidHandle
     }
     
-    
-//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-//
-//        if let error = error {
-//
-//            print("Sign In Error: \(error)")
-//
-//            return
-//        }
-//
-//        guard let authentication = user.authentication else { return }
-//        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
-//        self.firebaseAuth(credential)
-//
-//        print("Success!: \(credential)")
-//
-//    }
-//
-//    func firebaseAuth(_ credential: AuthCredential) {
-//        //        Auth.auth().signIn(with: credential) { (user, error) in
-//        Auth.auth().signInAndRetrieveData(with: credential) { (user, error) in
-//            if (error != nil) {
-//                print("Unable to sign in")
-//            } else {
-//                print("Sucessful Sign In With Firebase\n\(String(describing: user?.user.uid))\n\(String(describing:user?.user.displayName))")
-//                if let user = user {
-//                    let keychainResult = KeychainWrapper.standard.set(user.user.uid, forKey: KEY_UID)
-//                    print("User Data Saved To Keychain: \(String(describing: keychainResult))")
-//                }
-//            }
-//        }
-//    }
-
-//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-//
-//        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
-//    }
-    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

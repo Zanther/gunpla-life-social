@@ -407,17 +407,17 @@
                                                                         </constraints>
                                                                     </stackView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grey_heart" translatesAutoresizingMaskIntoConstraints="NO" id="R6m-iW-nFV">
-                                                                        <rect key="frame" x="310" y="311" width="50" height="50"/>
+                                                                        <rect key="frame" x="310" y="305" width="50" height="50"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="50" id="gMv-DV-Wk7"/>
                                                                             <constraint firstAttribute="width" constant="50" id="jId-SL-I7a"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGv-x0-mMp">
-                                                                        <rect key="frame" x="310" y="297" width="50" height="75"/>
+                                                                        <rect key="frame" x="293" y="285" width="67" height="87"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="75" id="3uL-JR-pRe"/>
-                                                                            <constraint firstAttribute="width" constant="50" id="8xk-iM-SYA"/>
+                                                                            <constraint firstAttribute="height" constant="87" id="3uL-JR-pRe"/>
+                                                                            <constraint firstAttribute="width" constant="67" id="8xk-iM-SYA"/>
                                                                         </constraints>
                                                                         <connections>
                                                                             <action selector="likeBtnTapped:" destination="PSQ-g0-Ho7" eventType="touchUpInside" id="43l-es-S0V"/>
@@ -434,7 +434,7 @@
                                                                     <constraint firstAttribute="bottom" secondItem="YGv-x0-mMp" secondAttribute="bottom" constant="38" id="h7I-sO-iAq"/>
                                                                     <constraint firstAttribute="trailing" secondItem="R6m-iW-nFV" secondAttribute="trailing" constant="-15" id="qhq-oB-Arl"/>
                                                                     <constraint firstItem="dQX-zw-3tO" firstAttribute="top" secondItem="3Ls-cT-Q10" secondAttribute="bottom" constant="5" id="tvJ-Yi-bci"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="R6m-iW-nFV" secondAttribute="bottom" constant="49" id="txR-t3-X6X"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="R6m-iW-nFV" secondAttribute="bottom" constant="55" id="txR-t3-X6X"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -618,7 +618,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zh8-vE-3AT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="-216"/>
+            <point key="canvasLocation" x="380" y="-216.50246305418719"/>
         </scene>
     </scenes>
     <resources>

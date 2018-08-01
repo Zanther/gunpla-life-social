@@ -30,7 +30,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         feedTableView.delegate = self
         feedTableView.dataSource = self
         
@@ -59,17 +59,17 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         DataService.dataService.REF_POSTS.observe(.value, with: { (snapshot) in
             self.posts = []
-
+            
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 
                 for snap in snapshot {
-//                    print("Post:", "\(snap)")
+                    //                    print("Post:", "\(snap)")
                     if let postDict = snap.value as? Dictionary<String, Any> {
                         let key = snap.key
                         let post = Post(postKey: key, postData: postDict)
                         self.posts.append(post)
                     }
-                    print(self.posts[0].imageUrl)
+//                    print(self.posts[0].imageUrl)
                 }
             }
             if self.posts.count > 0 {
@@ -95,26 +95,85 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         print("I want to add a New Post!")
         
         present(imagePicker, animated: true, completion:nil)
-    
+        
     }
     
     @IBAction func submitPostBtnTapped(_ sender: Any) {
         
         print("New Post Added!")
         
-        if self.captionTextField.text == "" {
+        guard let caption = captionTextField.text, caption != "" else {
+            print("Caption must be entered")
             self.showAlert(title: "Oh No!", message: "Please add a caption to your photo")
-        } else {
-        UIView.animate(withDuration: 0.24, animations: {
-            self.blackBG.alpha = 0
-            self.submitPostView.alpha = 0
-        }, completion: { (Success) in
-            self.submitPostView.isHidden = true
-            self.blackBG.isHidden = true
-        })
-        self.captionTextField.resignFirstResponder()
-        self.captionTextField.text = ""
+            return
         }
+        guard let img = submitThisImage.image else {
+            print("An image must be selected")
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 0.42) {
+            
+            let imgUid = NSUUID().uuidString
+            let metaData = StorageMetadata()
+            metaData.contentType = "image/jpeg"
+            
+            DataService.dataService.REF_SUBMITTED_IMG.child(imgUid).putData(imgData, metadata: metaData) { (metaData, error) in
+                
+                if error != nil {
+                    print("Unable to Upload Photo")
+                    self.showAlert(title: "Oh No!", message: "Unable to Upload Your Photo!\n\nError:\n\(error.debugDescription)")
+                } else {
+                    
+                    
+                    DataService.dataService.REF_SUBMITTED_IMG.child(imgUid).downloadURL(completion: { (url, error) in
+                        
+                        if error != nil {
+                            
+                            print("Error:", error.debugDescription)
+                            
+                        } else {
+                            print("Download URL:", url as Any)
+                            if let imgUrl = url?.absoluteString {
+                            self.postToFirebase(imgUrl:imgUrl)
+                            }
+                        }
+                        
+                    })
+                    
+                    UIView.animate(withDuration: 0.24, animations: {
+                        self.blackBG.alpha = 0
+                        self.submitPostView.alpha = 0
+                    }, completion: { (Success) in
+                        self.submitPostView.isHidden = true
+                        self.blackBG.isHidden = true
+                    })
+                    
+                }
+                
+            }
+            
+        }
+        
+        self.captionTextField.resignFirstResponder()
+        
+    }
+    
+    func postToFirebase(imgUrl: String) {
+        
+        let post : Dictionary<String, Any> = [
+            "caption": captionTextField.text as Any,
+            "imageUrl" : imgUrl as Any,
+            "likes": 0 as Any
+        ]
+        
+        let firebasePost = DataService.dataService.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        self.feedTableView.reloadData()
+        self.captionTextField.text = ""
+        
+        print("Successful Post to Firebase", post, firebasePost)
     }
     
     @IBAction func signoutBtnTapped(_ sender: Any) {
@@ -123,7 +182,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         if removeSuccessful {
             print("Successfully Signed out")
             try! Auth.auth().signOut()
-                        dismiss(animated: true, completion: nil)
+            dismiss(animated: true, completion: nil)
         } else {
             print("Sign out Unsuccessful")
         }
@@ -137,9 +196,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PostCell {
-        
+            
             let post = posts[indexPath.row]
-            print("Cell Post: \(post.imageUrl)")
+//            print("Cell Post: \(post.imageUrl)")
             
             if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString) {
                 
@@ -161,7 +220,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
-        UIView.animate(withDuration: 0.24, delay: 0, options: UIViewAnimationOptions.allowUserInteraction, animations: {
+        UIView.animate(withDuration: 0.2995, delay: 0, options: UIViewAnimationOptions.allowUserInteraction, animations: {
             cell.contentView.alpha = 1
         }, completion: nil)
     }
@@ -193,7 +252,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             } else {
                 UIView.animate(withDuration: 0.24, animations: {
                     self.submitPostView.alpha = 0
-                     self.blackBG.alpha = 0
+                    self.blackBG.alpha = 0
                 }, completion: { (Success) in
                     self.submitPostView.isHidden = true
                     self.blackBG.isHidden = true
@@ -212,15 +271,5 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         self.present(alert, animated: true)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
